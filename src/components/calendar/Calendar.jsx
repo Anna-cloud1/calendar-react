@@ -7,6 +7,7 @@ import events from '../../gateway/events';
 
 import './calendar.scss';
 
+
 class Calendar extends Component {
   state = {
     events,
@@ -19,7 +20,9 @@ class Calendar extends Component {
       <section className="calendar">
         <Navigation weekDates={weekDates} />
         <div className="calendar__body">
+
           <div className="calendar__week-container">
+      
             <Sidebar />
             <Week weekDates={weekDates} events={this.state.events} />
           </div>
