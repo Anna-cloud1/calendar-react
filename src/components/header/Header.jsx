@@ -1,20 +1,36 @@
 import React from 'react';
-
 import './header.scss';
 
-const Header = () => {
+
+const Header = ({
+  onTodayDateButton,
+  nextWeekButton,
+  prevWeekButton,
+  createEvent,
+}) => {
   return (
     <header className="header">
-      <button className="button create-event-btn">
+      <button className="button create-event-btn" onClick={createEvent}>
         <i className="fas fa-plus create-event-btn__icon"></i>Create
       </button>
       <div className="navigation">
-        <button className="navigation__today-btn button">Today</button>
-        <button className="icon-button navigation__nav-icon">
-          <i className="fas fa-chevron-left"></i>
+        <button
+          className="navigation__today-btn button"
+          onClick={onTodayDateButton}
+        >
+          Today
         </button>
-        <button className="icon-button navigation__nav-icon">
-          <i className="fas fa-chevron-right"></i>
+        <button
+          className="icon-button navigation__nav-icon"
+          onClick={prevWeekButton}
+        >
+          <i className="fas fa-chevron-left  "style={{color: '#fff', }}></i>
+        </button>
+        <button
+          className="icon-button navigation__nav-icon"
+          onClick={nextWeekButton}
+        >
+          <i className="fas fa-chevron-right" style={{color: '#fff', }}></i>
         </button>
         <span className="navigation__displayed-month"></span>
       </div>

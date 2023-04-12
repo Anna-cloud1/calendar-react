@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 import Navigation from './../navigation/Navigation';
 import Week from '../week/Week';
@@ -7,29 +7,26 @@ import events from '../../gateway/events';
 
 import './calendar.scss';
 
+const Calendar = ({ weekDates }) => {
+  const [currentDate, setCurrentDate] = useState(new Date());
 
-class Calendar extends Component {
-  state = {
-    events,
-  };
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
+  const day = currentDate.getDate();
+  const time = currentDate.toLocaleTimeString();
 
-  render() {
-    const { weekDates } = this.props;
 
-    return (
-      <section className="calendar">
-        <Navigation weekDates={weekDates} />
-        <div className="calendar__body">
-
-          <div className="calendar__week-container">
-      
-            <Sidebar />
-            <Week weekDates={weekDates} events={this.state.events} />
-          </div>
+  return (
+    <section className="calendar">
+      <Navigation weekDates={weekDates} />
+      <div className="calendar__body">
+        <div className="calendar__week-container">
+          <Sidebar />
+          <Week weekDates={weekDates} events={events} />
         </div>
-      </section>
-    );
-  }
-}
+      </div>
+    </section>
+  );
+};
 
 export default Calendar;

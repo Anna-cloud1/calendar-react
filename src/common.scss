@@ -1,7 +1,9 @@
 .button {
   height: 40px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(255, 255, 255, 0.195);
+  box-shadow: -5px 5px 30px -12px rgba(0, 0, 0, 0.95);
+   background-color: #ead1b26f;
   outline: none;
   cursor: pointer;
   font-size: 16px;

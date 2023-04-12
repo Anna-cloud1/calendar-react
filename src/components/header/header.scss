@@ -2,13 +2,14 @@
   display: flex;
   height: 60px;
   padding: 0 48px;
+  background-color: rgba(112, 82, 59, 0.4);
   align-items: center;
-
 }
 
 .create-event-btn {
   padding: 0 16px;
-background-color: #212a1f4e;
+ 
+  color: #ffffff;
   &__icon {
     margin-right: 8px;
   }
@@ -18,7 +19,8 @@ background-color: #212a1f4e;
   &__today-btn {
     margin-left: 32px;
     padding: 0 16px;
-    background-color: #212a1f4e;
+
+    color: #ffffff;
   }
 
   &__nav-icon {

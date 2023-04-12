@@ -3,10 +3,13 @@
   flex-direction: column;
   height: calc(100vh - 60px);
 
+
+
   &__header {
     display: flex;
     height: 100px;
     padding-left: 48px;
+
   }
 
   &__day {
